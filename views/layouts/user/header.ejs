@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Sopping</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/fontawesome/css/font-awesome.css">
+
+	<script type="text/javascript" src="/ajax/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+	<header class="menu">
+	<div class="container">
+			<div class="leftcontainer">
+				<a href="/home" class="logo"><h2>haatbazar - International</h2></a>
+				
+			</div>
+			<div class="logout_"><a href="/logout">Logout</a></div>
+			<div class="cart"><a href="/user/cart">Cart</a></div>
+		</div>
+	</header>
+
+<div class="panel panel-default">
+<div class="row">
+
+	<div class="col-sm-4">
+			<div class="container">
+			  <h2></h2>
+			  <div class="container">                                        
+				 <a href="/user/pendingOrder"><button type="button" class="btn btn-info btn_sz_">Orders Details</button></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="container">
+			  <h2></h2>
+			  <div class="container">                                        
+				 <a href="/user/pendingOrder"><button type="button" class="btn btn-info btn_sz_">Order History</button></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="container">
+			  <h2></h2>
+			  <div class="container">                                        
+				 <a href="/user/cart"><button type="button" class="btn btn-info btn_sz_">Cart</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<%- content %>
+
+
+	
+	
+</body>
+</html>
+
+<style type="text/css">
+	.btn_sz_{
+		padding: 20px 10px;
+		font-size: 20px;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+
+	
+.cart{
+	float: right;
+	margin-top: 20px;
+	margin-right: 50px;
+}
+.cart a{
+	color: #fff;
+	font-size: 20px;
+}
+
+.cart a:hover{
+	color: #fff;
+}
+</style>

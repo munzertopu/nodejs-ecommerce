@@ -1,0 +1,38 @@
+<div class="right_portion_pro"> 
+		
+			<div class="add_product_area">
+				
+				<div class="login_area">
+					<h2 style="text-align:center; color:#FFF">Add Product</h2>
+					<p class="error"><%- msg%></p>
+					<form method="POST" encType="multipart/form-data">
+						<center>
+							<select style="width:100%; color: #666666;" class="gender_class" name="cat" id="cat" >
+							    <option class="option_class" value="0">Category</option>
+							    
+							    <% for(var i = 0; i < categories.length; i++) {%>
+							    		<option class="option_class" value="<%= categories[i].id %>">
+							    			<%= categories[i].category_name %>
+							    		</option>
+							    <%}%>	
+							</select>
+							</br>
+							<input style="width:100%;" type="text" placeholder="Product Name" name="title"/></br>
+
+							<input style="width:100%;" type="text" placeholder="Price" name="price" /></br>
+
+							<input style="width:100%;" type="text" placeholder="Quantity" name="stock" /></br>
+							
+							<textarea name="short_desc" placeholder="Description.." style="width:100%;height:100px;margin-top:10px;"></textarea></br>
+
+							</br>
+							<input style="border: 1px solid #333; background-color: rgba(38, 38, 38,0.5); color: #fff;" name="pic" type="file"/></br>
+							<input type="submit" name="add_product_btn" class="btn" id="add_product_btn" value="Add Product"/>
+						
+						</center>
+					</form>
+					
+				</div>
+			</div>	
+
+	</div>

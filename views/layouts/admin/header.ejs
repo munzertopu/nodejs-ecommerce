@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Sopping | <%- title %></title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/fontawesome/css/font-awesome.css">
+
+	<script type="text/javascript" src="/ajax/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+	
+</head>
+<body>
+	<header class="menu">
+	<div class="container">
+			<div class="leftcontainer">
+				<a href="/home" class="logo"><h2>haatbazar - International</h2></a>
+				
+			</div>
+			<div class="logout_"><a href="/logout">Logout</a></div>
+		</div>
+	</header>
+
+<div class="panel panel-default">
+<div class="row">
+
+	<div class="col-sm-3">
+			<div class="container">
+			  <h2></h2>
+			  <div class="container">                                        
+				  <div class="dropdown">
+				  	<button class="btn btn-info btn_sz_a dropdown-toggle" type="button" data-toggle="dropdown">Product Management<span class="caret"></span></button>
+				    <ul class="dropdown-menu">
+				      <li><a href="/admin/addProduct"><button type="button" class="btn btn-primary btn_sz_a">Add Product</button></a></li>
+				      <li><a href="/admin/deleteProduct"><button type="button" class="btn btn-primary btn_sz_a">Delete Product</button></a></li>
+				      <li><a href="/admin/updateProduct"><button type="button" class="btn btn-primary btn_sz_a">Update Product</button></a></li>
+				    </ul>
+				  </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<div class="container">
+			  <h2></h2>
+			  <div class="container">                                        
+				  <div class="dropdown">
+				  	<button class="btn btn-info btn_sz_a dropdown-toggle" type="button" data-toggle="dropdown">Category Management<span class="caret"></span></button>
+				    <ul class="dropdown-menu">
+				      <li><a href="/admin/addCategory"><button type="button" class="btn btn-primary btn_sz_a">Add Category</button></a></li>
+				      <li><a href="/admin/deleteCategory"><button type="button" class="btn btn-primary btn_sz_a">Delete Category</button></a></li>
+				      <li><a href="/admin/updateCategory"><button type="button" class="btn btn-primary btn_sz_a">Update Category</button></a></li>
+				    </ul>
+				  </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<div class="container">
+			  <h2></h2>
+			  <div class="container">                                        
+				 <a href="/admin/pendingOrder"><button type="button" class="btn btn-info btn_sz_a">Order Details</button></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<div class="container">
+			  <h2></h2>
+			  <div class="container">                                        
+				  <a href="/admin/showUsers"><button type="button" class="btn btn-info btn_sz_a">User List</button></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+ <br>
+ <br>
+ <br>
+
+
+	<%- content %>
+	<br>
+	<br>
+</body>
+</html>
+
+<style type="text/css">
+	.btn_sz_a{
+	width: 310px;
+	height: 70px;
+	font-size: 18px;
+}
+</style>

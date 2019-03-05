@@ -1,0 +1,82 @@
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+
+
+<div class="cart_product" id="cart"> 
+		<center>
+		<h2>Cart</h2>
+		<p style="color: red;"><%= msg%></p>
+		<div class="delete_pro_area" style="width: 60%">
+			<table border="1px" style="font-size:20px; padding:10px;margin-bottom:20px;">
+				
+				<tr > 
+					<td style="font-size:20px; padding:10px;">ID</td>
+					<td style="font-size:20px; padding:10px;">Title</td>
+					<td style="font-size:20px; padding:10px;">Price</td>
+					<td style="font-size:20px; padding:10px;">Quantity</td>
+					<td style="font-size:20px; padding:10px;">Add more</td>
+				</tr>
+
+				<% if(catPro!=null){%>
+					
+					<% for(var i = 0; i < catPro.length; i++) {
+						 for(var j = 0; j < catPro[i].length; j++) {
+					%>
+
+							 <tr > 
+								<td style="font-size:20px; padding:10px;"><%= catPro[i][j].id %></td>
+								<td style="font-size:20px; padding:10px;"><%= catPro[i][j].title %></td>
+								<td style="font-size:20px; padding:10px;"><%= catPro[i][j].price %></td>
+								<td style="font-size:20px; padding:10px;">1</td>
+								<td style="font-size:20px; padding:10px;"></td>
+							</tr>
+
+						<% 
+						       
+						}
+					}
+				}%>
+
+
+				<tr > 
+					<td style="font-size:20px; padding:10px;"></td>
+					<td style="font-size:20px; padding:10px;">Total</td>
+					<td style="font-size:20px; padding:10px;"><%= totalPrice %> tk</td>
+					<td style="font-size:20px; padding:10px;"><%= totalQuantity %></td>
+					<td style="font-size:20px; padding:10px;"><input type="text" placeholder="Category Title" name="cat_title" value="<%= totalQuantity %>"/></td>
+				</tr>
+
+				
+				
+			</table>
+				
+			<center>
+
+				<div class="container" style="width: 60%;">                                        
+				  <div class="dropdown">
+				  	<button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Confirm</button>
+				    <div class="dropdown-menu drp">
+						<form method="POST">
+							<center>
+								<input type="text" placeholder="Enter Shipping Address" name="shipadd" /></br>
+								<input type="date" id="datepicker" name="shippingDate">
+
+
+								<input type="submit" value="Confirm Order" name="order_btn" class="btn" id="order_btn" />
+							</center>
+						</form>
+				    </div>
+				  </div>
+				</div>
+
+
+</center>
+			</div>
+		</center>
+	</div>
+
+	<style type="text/css">
+		.drp{
+			margin-left: 20%;
+		}
+	</style>

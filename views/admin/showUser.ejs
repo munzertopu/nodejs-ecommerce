@@ -1,0 +1,32 @@
+<center>
+	<h2>User List</h2>
+	<div class="delete_pro_area" style="width: 60%">
+		<table border="1px" style="font-size:20px; padding:10px;">
+			<tr > 
+				<td style="font-size:20px; padding:10px;">Name</td>
+				<td style="font-size:20px; padding:10px;">Email</td>
+				<td style="font-size:20px; padding:10px;">Gender</td>
+				<td style="font-size:20px; padding:10px;">Type</td>
+				<td style="font-size:20px; padding:10px;">Delete User</td>
+		
+			
+			</tr>
+
+			<% if(users!=null){%>
+				<% for(var i = 0; i < users.length; i++) {%>
+				<tr >
+					<td style="font-size:20px; padding:10px;"><%= users[i].name%></td>
+					<td style="font-size:20px; padding:10px;"><%= users[i].email%></td>
+					<td style="font-size:20px; padding:10px;"><%= users[i].gender%></td>
+					<td style="font-size:20px; padding:10px;"><%= users[i].type_name%></td>
+
+				<% if(users[i].type_name!="admin"){%>
+					<td style="font-size:20px; padding:10px;"><a style="color: #ff3300;" href="/admin/showUsers/<%= users[i].id %>"><img src="../images/deleteIcon.png" class="cross"></a></td>
+				<%}else{%>
+					<td style="font-size:20px; padding:10px;"></td>
+				<%}%>
+				</tr>
+			<%}}%>
+		</table>
+	</div>
+</center>

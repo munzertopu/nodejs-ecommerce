@@ -1,0 +1,39 @@
+<br>
+<div class="container_wrap">
+    <h4 style="text-align: center; background-color: rgba(255, 51, 0,0.7); color: #fff;">Trending Now</h4>
+  	<div class="row">
+    	<div class="container">
+      
+	        <% for(var i = 0; i < products.length; i++) {%>
+                <div class="col-md-4 col-sm-4"  style="height: 700px;">
+                  <br>
+                  <div class="card">
+                  <span class="thumbnail">
+        
+                          <img src="/images/<%= products[i].img_path %>" alt="product" style="width:100%">
+                          <div class="container">
+                            <h4><b><%= products[i].title %></b></h4> 
+                            
+                            <div style="color: #333; width: 200px; height: 200px; border: 1px solid #333; padding: 5px 5px; overflow: auto; word-wrap: break-word;"><%= products[i].short_desc %></div>
+                          </div>
+                        
+                      <hr class="line">
+                      <div class="row">
+	                        <div class="col-md-6 col-sm-6">
+	                          <p style="color: #333;"><%= products[i].price %> Taka</p>
+	                        </div>
+	                        <div class="col-md-6 col-sm-6">
+	                         <a href="/user/cart/<%= products[i].id %>" style="float: right;"><button class="btn" >Buy</button></a>
+	                        </div>
+
+                      </div>
+                  </span>
+                </div>
+              </div>
+
+             
+               <%}%>
+	       
+	    </div>
+    </div>
+</div>

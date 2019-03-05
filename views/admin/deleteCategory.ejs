@@ -1,0 +1,27 @@
+<center>
+	<h2>Catogory List</h2>
+	<div class="delete_pro_area">
+		<table border="1px" style="font-size:20px; padding:10px;">
+				
+				
+				<tr > 
+					<td style="font-size:20px; padding:10px;">ID</td>
+					<td style="font-size:20px; padding:10px;">Name</td>
+					<td style="font-size:20px; padding:10px;">Price</td>
+					<td style="font-size:20px; padding:10px;">Delete</td>
+				</tr>
+
+				<% if(categories!=null){%>
+					<% for(var i = 0; i < categories.length; i++) {%>
+					<tr>
+						<td style="font-size:20px; padding:10px;"><%= categories[i].id %></td>
+						<td style="font-size:20px; padding:10px;"><%= categories[i].category_name %></td>
+						<td style="font-size:20px; padding:10px;"><%= categories[i].short_desc %></td>
+						<td style="font-size:20px; padding:10px;"><a href="/admin/deleteCategory/<%= categories[i].id %>"><img src="../images/deleteIcon.png" class="cross"></a></td>
+					</tr>
+					<%}%>
+				<%}%>
+				
+			</table>
+		</div>
+	</center>

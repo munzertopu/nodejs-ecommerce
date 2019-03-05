@@ -1,0 +1,26 @@
+<center>
+	<h2>Update Category</h2>
+	<div class="delete_pro_area">
+		<table border="1px" style="font-size:20px; padding:10px;">
+				
+		
+				<tr > 
+					<td style="font-size:20px; padding:10px;">ID</td>
+					<td style="font-size:20px; padding:10px;">Name</td>
+					<td style="font-size:20px; padding:10px;">Description</td>
+					<td style="font-size:20px; padding:10px;">Edit</td>
+				</tr>
+				<% if(categories!=null){%>
+					<% for(var i = 0; i < categories.length; i++) {%>
+					<tr>
+						<td style="font-size:20px; padding:10px;"><%= categories[i].id %></td>
+						<td style="font-size:20px; padding:10px;"><%= categories[i].category_name %></td>
+						<td style="font-size:20px; padding:10px;"><%= categories[i].short_desc %></td>
+						<td style="font-size:20px; padding:10px;"><a style="color: #fff;" href="/admin/updateCategory/<%= categories[i].id %>">Edit</a></td>
+					</tr>
+					<%}%>
+				<%}%>
+	
+			</table>
+		</div>
+	</center>

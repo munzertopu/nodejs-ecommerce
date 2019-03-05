@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col-sm-4">
+		<div class="reg_user">
+			Registered Users
+
+			<p><% if(userCount!=null){%>
+			
+			<%= userCount%>
+			<%}%>
+			</p>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="daily_vis">
+			Daily visitors
+			<p>100</p>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="stock">
+			Stock
+			<p><% if(productCount!=null){%>
+			
+			<%= productCount%>
+			<%}%>
+			</p>
+		</div>
+	</div>
+</div>

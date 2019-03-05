@@ -1,0 +1,46 @@
+<div class="right_portion_pro"> 
+		
+			<div class="add_product_area">
+				
+				<div class="login_area">
+					<h2 style="text-align:center; color:#FFF">Update Product</h2>
+					<p class="message"><%- msg%></p>
+					<form method="POST" encType="multipart/form-data">
+						<center>
+							<% for(var i = 0; i < product.length; i++) {%>
+								<input type="text" placeholder="Product Title" name="title" value="<%= product[i].title%>"/></br>
+
+								<input type="text" placeholder="Price" name="price" value="<%= product[i].price%>" /></br>
+
+								<input type="text" placeholder="Stock" name="stock" value="<%= product[i].stock%>" /></br>
+								
+								<textarea name="short_desc" placeholder="Short Description" style="width:80%;height:100px;margin-top:10px;">
+									 <%= product[i].short_desc %>
+								</textarea></br>
+								
+
+								<select class="gender_class" name="cat" id="cat" >
+								    <option class="option_class" value="0">Select Category</option>
+								    
+								    <% for(var k = 0; k < categories.length; k++) {
+								    		if(categories[k].id==product[i].category_id)
+								    		{%>
+									    		<option class="option_class" value="<%= categories[k].id %>" selected="true"><%= categories[k].category_name %></option>
+									    	<%}%>
+								    		<option class="option_class" value="<%= categories[k].id %>">
+								    			<%= categories[k].category_name %>
+								    		</option>
+								    <%}%>	
+								</select></br>
+								<img src="/images/<%= product[i].img_path %>" alt="" style="height:150px; width:200px; margin-top:20px;" />
+								<input name="pic" type="file"/></br>
+								<input type="submit" name="add_product_btn" class="btn" id="add_product_btn" value="Update Product"/>
+							<%}%>
+						
+						</center>
+					</form>
+					
+				</div>
+			</div>	
+
+	</div>

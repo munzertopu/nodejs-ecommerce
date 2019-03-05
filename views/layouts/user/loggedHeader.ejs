@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Online Sopping</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+
+	<script type="text/javascript" src="/ajax/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	  $(function() {
+	    $( "#datepicker" ).datepicker({ minDate: +1, maxDate: "+7D" ,dateFormat: 'yy/mm/dd'});
+	  });
+  </script>
+	
+</head>
+<body>
+	<header class="menu">
+	
+		<div class="container">
+			<div class="leftcontainer">
+				<a href="/home" class="logo"><h2>haatbazar - International</h2></a>
+					
+			</div>
+			<div class="">
+			<ul style="float: right;">
+					<li><a href="/home">home</a></li>
+					<li><a href="/user/cart">Cart</a></li>
+					<li><a href="/user">Dashboard</a></li>
+					<li><a href="/user/cart"><img src="images/icons8-shopping-cart-24.png" class="cart"></a></li>
+					<li><a href="/logout">Logout</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</header>
+
+	<%- content %>
+
+
+	
+</body>
+</html>

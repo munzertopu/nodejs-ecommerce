@@ -1,0 +1,22 @@
+<div class="add_category_area">
+				
+		<div class="login_area" style="width: 100%; margin-left: 15%;">
+			<h2 style="text-align:center; color:#FFF">Update Category</h2>
+			<form method="POST">
+				<p style="color: #333;"><%= msg%></p>
+				<center>
+					<% for(var i = 0; i < categories.length; i++) {%>
+						<input type="text" placeholder="Category Title" name="cat_title" value="<%= categories[i].category_name%>"/></br>
+						
+						
+						<textarea name="short_desc" placeholder="Short Description" style="width:80%;height:100px;margin-top:10px;"><%= categories[i].short_desc%></textarea>
+						
+						
+						<input type="submit" name="add_category_btn" class="btn" id="add_category_btn" value="Update"/>
+						
+					<%}%>
+					
+				</center>
+			</form>
+		</div>
+</div>
